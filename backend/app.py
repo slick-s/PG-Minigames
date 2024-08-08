@@ -21,6 +21,8 @@ class MemoryGame:
             {"id": 10, "name": "card4", "front_image": "Marvel.jpg", "back_image": "hawkman.png"},
             {"id": 11, "name": "card4", "front_image": "Marvel.jpg", "back_image": "Spiderman.png"},
             {"id": 12, "name": "card4", "front_image": "Marvel.jpg", "back_image": "Spiderman.png"},
+            {"id": 13, "name": "card4", "front_image": "Marvel.jpg", "back_image": "Antman.png"},
+            {"id": 14, "name": "card4", "front_image": "Marvel.jpg", "back_image": "Antman.png"},
         ]
         self.game_state = []
 
