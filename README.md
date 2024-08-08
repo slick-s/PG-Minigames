@@ -5,6 +5,7 @@ This game will be credited and inspired by Net Ninja (which will be credited lat
 
 ## Demo
 
+https://github.com/slick-s/PG-Minigames/blob/kayla-branch/Screenshot%202024-08-08%20at%2001-31-33%20Memory%20Card%20Game.png
 This demo shows a sample of what the game would look like when running before user starts.
 
 ## Technologies 
