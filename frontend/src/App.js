@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import Card from './components/Card';
 
 function App() {
     const [cards, setCards] = useState([]);
@@ -21,7 +22,7 @@ function App() {
             })
             .then(data => {
                 const initialState = data.reduce((acc, card) => {
-                    acc[card.id] = false; // Initially, all cards are not flipped
+                    acc[card.id] = false; // All cards should be initially flipped back
                     return acc;
                 }, {});
                 setCards(data);
@@ -79,21 +80,15 @@ function App() {
             <h2>Turns: {turns}</h2>
             <button onClick={startNewGame}>New Game</button>
             <div className="card-grid">
-                {cards.map(card => (
-                    <div
+            {cards.map(card => (
+                    <Card
                         key={card.id}
-                        className={`card ${flippedCards[card.id] ? 'flipped' : ''}`}
-                        onClick={() => handleCardClick(card.id)}
-                    >
-                        <div className="card-inner">
-                            <div className="card-front">
-                                <img src={`http://localhost:5000/img/${card.front_image}`} alt={card.name} />
-                            </div>
-                            <div className="card-back">
-                                <img src={`http://localhost:5000/img/${card.back_image}`} alt="Card Back" />
-                            </div>
-                        </div>
-                    </div>
+                        id={card.id}
+                        frontImage={card.front_image}
+                        backImage={card.back_image}
+                        isFlipped={flippedCards[card.id]}
+                        onClick={handleCardClick}
+                    />
                 ))}
             </div>
         </div>
