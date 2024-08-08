@@ -6,26 +6,31 @@ function App() {
     const [flippedCards, setFlippedCards] = useState({});
     const [firstCard, setFirstCard] = useState(null);
     const [turns, setTurns] = useState(0);
-   
+
     useEffect(() => {
-      startNewGame();
+        startNewGame();
     }, []);
 
-  const startNewGame = () => {
-      fetch('http://localhost:5000/api/new', { method: 'POST' })
-          .then(response => response.json())
-          .then(data => {
-              const initialState = data.reduce((acc, card) => {
-                  acc[card.id] = false; // Initially, all cards are not flipped
-                  return acc;
-              }, {});
-              setCards(data);
-              setFlippedCards(initialState);
-              setFirstCard(null); // Reset first card
-              setTurns(0); // Reset turns counter
-          })
-          .catch(error => console.error('Error starting new game:', error));
-  };
+    const startNewGame = () => {
+        fetch('http://localhost:5000/api/new', { method: 'POST' })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const initialState = data.reduce((acc, card) => {
+                    acc[card.id] = false; // Initially, all cards are not flipped
+                    return acc;
+                }, {});
+                setCards(data);
+                setFlippedCards(initialState);
+                setFirstCard(null); // Reset first card
+                setTurns(0); // Reset turns counter
+            })
+            .catch(error => console.error('Error starting new game:', error));
+    };
 
     const handleCardClick = (id) => {
         if (flippedCards[id]) return; // Ignore clicks on already flipped cards
@@ -43,7 +48,7 @@ function App() {
                 ...prevState,
                 [secondCard]: true
             }));
-            
+
             // Increment the turn counter
             setTurns(turns + 1);
 
@@ -95,4 +100,4 @@ function App() {
     );
 }
 
-export default App; 
+export default App;
