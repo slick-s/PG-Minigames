@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, send_from_directory
+from flask import Flask, jsonify, request, send_from_directory, render_template, redirect, url_for
 from flask_cors import CORS
 import random
 import os
@@ -36,6 +36,21 @@ class MemoryGame:
 
     def create_new_game(self):
         return self.start_game()
+
+#Route for homepage (in order to access the Memorygame)
+@app.route('/', methods=['GET'])
+def home():
+    return render_template('index.html')
+
+#Route to handle the login
+@app.route('/login', methods=['POST'])
+def login():
+    return redirect(url_for('game')) #checks username and password if valid
+
+#Route for guest access
+@app.route('/guest', methods=['GET'])
+def guest():
+    return redirect(url_for('game'))
 
 # Create a MemoryGame instance
 game = MemoryGame()
