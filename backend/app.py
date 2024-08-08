@@ -9,14 +9,18 @@ CORS(app)
 class MemoryGame:
     def __init__(self):
         self.cards = [
-            {"id": 1, "name": "card1", "front_image": "CptAmerica.png", "back_image": "Marvel.jpg"},
-            {"id": 2, "name": "card1", "front_image": "CptAmerica.png", "back_image": "Marvel.jpg"},
-            {"id": 3, "name": "card2", "front_image": "Hulk.png", "back_image": "Marvel.jpg"},
-            {"id": 4, "name": "card2", "front_image": "Hulk.png", "back_image": "Marvel.jpg"},
-            {"id": 5, "name": "card3", "front_image": "Ironman.png", "back_image": "Marvel.jpg"},
-            {"id": 6, "name": "card3", "front_image": "Ironman.png", "back_image": "Marvel.jpg"},
-            {"id": 7, "name": "card4", "front_image": "Thor.png", "back_image": "Marvel.jpg"},
-            {"id": 8, "name": "card4", "front_image": "Thor.png", "back_image": "Marvel.jpg"},
+            {"id": 1, "name": "card1", "front_image":"Marvel.jpg" , "back_image": "CptAmerica.png"},
+            {"id": 2, "name": "card1", "front_image": "Marvel.jpg", "back_image": "CptAmerica.png"},
+            {"id": 3, "name": "card2", "front_image": "Marvel.jpg", "back_image": "Hulk.png"},
+            {"id": 4, "name": "card2", "front_image": "Marvel.jpg", "back_image": "Hulk.png"},
+            {"id": 5, "name": "card3", "front_image": "Marvel.jpg", "back_image": "Ironman.png"},
+            {"id": 6, "name": "card3", "front_image": "Marvel.jpg", "back_image": "Ironman.png"},
+            {"id": 7, "name": "card4", "front_image": "Marvel.jpg", "back_image": "Thor.png"},
+            {"id": 8, "name": "card4", "front_image": "Marvel.jpg", "back_image": "Thor.png"},
+            {"id": 9, "name": "card4", "front_image": "Marvel.jpg", "back_image": "hawkman.png"},
+            {"id": 10, "name": "card4", "front_image": "Marvel.jpg", "back_image": "hawkman.png"},
+            {"id": 11, "name": "card4", "front_image": "Marvel.jpg", "back_image": "Spiderman.png"},
+            {"id": 12, "name": "card4", "front_image": "Marvel.jpg", "back_image": "Spiderman.png"},
         ]
         self.game_state = []
 
