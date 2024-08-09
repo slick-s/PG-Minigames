@@ -1,15 +1,15 @@
-from flask import Flask, jsonify, request, send_from_directory, render_template, redirect, url_for
+from flask import Flask, jsonify, request, send_from_directory, redirect, url_for
 from flask_cors import CORS
 import random
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='frontend/build', static_url_path='')
 CORS(app)
 
 class MemoryGame:
     def __init__(self):
         self.cards = [
-            {"id": 1, "name": "card1", "front_image":"Marvel.jpg" , "back_image": "CptAmerica.png"},
+            {"id": 1, "name": "card1", "front_image": "Marvel.jpg", "back_image": "CptAmerica.png"},
             {"id": 2, "name": "card1", "front_image": "Marvel.jpg", "back_image": "CptAmerica.png"},
             {"id": 3, "name": "card2", "front_image": "Marvel.jpg", "back_image": "Hulk.png"},
             {"id": 4, "name": "card2", "front_image": "Marvel.jpg", "back_image": "Hulk.png"},
@@ -37,46 +37,48 @@ class MemoryGame:
     def create_new_game(self):
         return self.start_game()
 
-#Route for homepage (in order to access the Memorygame)
-@app.route('/', methods=['GET'])
-def home():
-    return render_template('index.html')
+@app.route('/')
+def index():
+    return send_from_directory(app.static_folder, 'index.html')
 
-#Route to handle the login
+@app.route('/<path:path>')
+def serve_static(path):
+    return send_from_directory(app.static_folder, path)
+
+# Route to handle the login
 @app.route('/login', methods=['POST'])
 def login():
-    return redirect(url_for('game')) #checks username and password if valid
+    return redirect(url_for('new_game'))
 
-#Route for guest access
+# Route for guest access
 @app.route('/guest', methods=['GET'])
 def guest():
-    return redirect(url_for('game'))
+    return redirect(url_for('new_game'))
 
 # Create a MemoryGame instance
 game = MemoryGame()
 
 @app.route('/api/new', methods=['POST'])
 def create_new_game():
-    print("Create new game (POST) endpoint hit")
+    #print("Create new game (POST) endpoint hit")
     game_state = game.create_new_game()
     return jsonify(game_state)
 
 @app.route('/api/new_game', methods=['GET'])
 def new_game():
-    print("Create new game (GET) endpoint hit")
+    #print("Create new game (GET) endpoint hit")
     game_state = game.create_new_game()
     return jsonify(game_state)
 
-
 @app.route('/api/start', methods=['POST'])
 def start_game():
-    print("Start game endpoint hit")
+    #print("Start game endpoint hit")
     game_state = game.start_game()
     return jsonify(game_state)
 
 @app.route('/api/initialize', methods=['POST'])
 def initialize_game():
-    print("Initialize game endpoint hit")
+    #print("Initialize game endpoint hit")
     game_state = game.initialize_game()
     return jsonify(game_state)
 

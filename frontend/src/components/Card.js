@@ -1,6 +1,5 @@
-// src/Card.js
 import React from 'react';
-import './Card.css'; // If you have specific styles for the card
+import './Card.css'; 
 
 const Card = ({ id, frontImage, backImage, isFlipped, onClick }) => {
     return (

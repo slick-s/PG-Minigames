@@ -16,39 +16,3 @@ body {
   background-color: rgb(10, 11, 11);
   color:bisque
 }
-
-h1 {
-  font-size: 2em;
-  margin-bottom: 0.5em;
-} 
-
-h2 {
-  font-size: 1.5em;
-  margin-bottom: 1em;
-}
-
-
-.h1 button{
-  background:none;
-  border:2px solid #fff;
-  padding: 20px 20px;
-  margin: 20px; 
-  border-radius: 10px;
-  color:#fff;
-  font-weight: bold;
-  cursor: pointer;
-  font-size:3em;
-}
-
-button:hover{
-  background: #e02765;
-  color:#f8f5f5;
-}
-
-
-
-.card-back {
-  background-color: #000;
-  color: #fff;
-  transform: rotateY(180deg);
-}

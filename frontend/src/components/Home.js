@@ -1,5 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import Home from './Home.css';
 
 function Home() {
     const history = useHistory();
@@ -15,7 +16,7 @@ function Home() {
     };
 
     return (
-        <div className="home-container">
+        <div className="home-page">
             <h1>Welcome to the Memory Card Game</h1>
             <button onClick={handleLogin}>Log In</button>
             <button onClick={handleGuest}>Play as Guest</button>
