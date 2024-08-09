@@ -17,12 +17,12 @@ class MemoryGame:
             {"id": 6, "name": "card3", "front_image": "Marvel.jpg", "back_image": "Ironman.png"},
             {"id": 7, "name": "card4", "front_image": "Marvel.jpg", "back_image": "Thor.png"},
             {"id": 8, "name": "card4", "front_image": "Marvel.jpg", "back_image": "Thor.png"},
-            {"id": 9, "name": "card4", "front_image": "Marvel.jpg", "back_image": "hawkman.png"},
-            {"id": 10, "name": "card4", "front_image": "Marvel.jpg", "back_image": "hawkman.png"},
-            {"id": 11, "name": "card4", "front_image": "Marvel.jpg", "back_image": "Spiderman.png"},
-            {"id": 12, "name": "card4", "front_image": "Marvel.jpg", "back_image": "Spiderman.png"},
-            {"id": 13, "name": "card4", "front_image": "Marvel.jpg", "back_image": "Antman.png"},
-            {"id": 14, "name": "card4", "front_image": "Marvel.jpg", "back_image": "Antman.png"},
+            {"id": 9, "name": "card5", "front_image": "Marvel.jpg", "back_image": "hawkman.png"},
+            {"id": 10, "name": "card5", "front_image": "Marvel.jpg", "back_image": "hawkman.png"},
+            {"id": 11, "name": "card6", "front_image": "Marvel.jpg", "back_image": "Spiderman.png"},
+            {"id": 12, "name": "card6", "front_image": "Marvel.jpg", "back_image": "Spiderman.png"},
+            {"id": 13, "name": "card7", "front_image": "Marvel.jpg", "back_image": "Antman.png"},
+            {"id": 14, "name": "card7", "front_image": "Marvel.jpg", "back_image": "Antman.png"},
         ]
         self.game_state = []
 

@@ -34,7 +34,8 @@ function MemoryGame() {
     };
 
     const handleCardClick = (id) => {
-        if (flippedCards[id]) return; // Ignore clicks on already flipped cards
+        if (flippedCards[id] || firstCard === id) return; // Ignore clicks on already flipped cards or clicking the same card twice
+    
         if (firstCard === null) {
             // First card flip
             setFirstCard(id);
@@ -49,14 +50,13 @@ function MemoryGame() {
                 ...prevState,
                 [secondCard]: true
             }));
-
+    
             // Increment the turn counter
-            setTurns(turns + 1);
-
-            // Check if the cards match
+            setTurns(prevTurns => prevTurns + 1);
+    
             const firstCardData = cards.find(card => card.id === firstCard);
             const secondCardData = cards.find(card => card.id === secondCard);
-
+    
             if (firstCardData.name === secondCardData.name) {
                 // Cards match - keep them flipped
                 setFirstCard(null);
@@ -73,6 +73,7 @@ function MemoryGame() {
             }
         }
     };
+    
 
     return (
         <div>
