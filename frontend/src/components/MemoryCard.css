@@ -1,3 +1,22 @@
+.MemoryCard {
+    max-width: 860px;
+    margin:40px auto;
+    background: #000;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center all content horizontally */
+    text-align: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(10, 11, 11);
+    color:bisque
+  }
+
 h1 {
     font-size: 2em;
     margin-bottom: 0.5em;

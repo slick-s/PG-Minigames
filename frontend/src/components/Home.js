@@ -1,27 +1,27 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
-import Home from './Home.css';
+import { useNavigate } from 'react-router-dom';
+import './Home.css';
 
-function Home() {
-    const history = useHistory();
+function Home({ onStartAsGuest, onLogin }) {
+    const navigate = useNavigate();
 
-    const handleLogin = () => {
-        // Navigate to the login route
-        history.push('/login');
+    const handleGuestClick = () => {
+        onStartAsGuest();
+        navigate('/game'); // Navigate to the game page if necessary
     };
 
-    const handleGuest = () => {
-        // Navigate to the guest route (bypassing login)
-        history.push('/guest');
+    const handleLoginClick = () => {
+        onLogin();
+        navigate('/game'); // Navigate to the game page if necessary
     };
 
     return (
-        <div className="home-page">
-            <h1>Welcome to the Memory Card Game</h1>
-            <button onClick={handleLogin}>Log In</button>
-            <button onClick={handleGuest}>Play as Guest</button>
+        <div>
+            <button onClick={handleGuestClick}>Play as Guest</button>
+            <button onClick={handleLoginClick}>Login</button>
         </div>
     );
 }
 
 export default Home;
+

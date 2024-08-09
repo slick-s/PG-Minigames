@@ -1,30 +1,30 @@
-import React from 'react';
-import MemoryGame from './components/MemoryGame'; 
+import React, { useState } from 'react';
+import MemoryCard from './components/MemoryCard'; 
 import Home from './components/Home';
 
 function App() {
     const [gameStarted, setGameStarted] = useState(false);
     const [userType, setUserType] = useState(null); // 'guest' or 'login'
 
-    const startGameAsGuest = () =>{
+    const startGameAsGuest = () => {
         setUserType('guest');
         setGameStarted(true);
     };
 
-    const login = ()=>{
+    const login = () => {
         setUserType('login');
         setGameStarted(true);
     }
 
-    if(!gameStarted){
-        return(
-            <Home onStartAsGuest= {startGameAsGuest} onLogin={login}/>
+    if (!gameStarted) {
+        return (
+            <Home onStartAsGuest={startGameAsGuest} onLogin={login} />
         );
     }
 
     return (
         <div>
-            <MemoryGame userType={userType}/>
+            <MemoryCard userType={userType} />
         </div>
     );
 }
