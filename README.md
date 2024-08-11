@@ -71,3 +71,39 @@ chatgpt.com
 Used chatgpt to help with errors throughout the code especially with figuring out the routes to the game.
 
  ## Changelog
+
+ ### [1.0.0] - 2024-07-31
+#### Added
+- Initial release of the project.
+- Implemented user authentication.
+- Set up the initial project structure.
+
+### [1.0.1] - 2024-08-6
+#### Added
+- Starter code set up for backend
+- Created Routes of the game using python
+
+### [1.0.2] - 2024-08-7
+#### Added
+-Created a card component on front end
+-Created a turn counter
+
+#### Fixed
+-Adjusted routes
+-Minor updates on the CSS
+
+### [1.0.3] - 2024-08-8
+#### Added
+- Added pictures of the cards
+-Added routes for the Login
+-Added Route paths on App.js
+
+#### Fixed
+- Typo found in app.py
+-Routes fixed to accomodate new route for login
+
+### [1.0.4] - 2024-08-11
+#### Fixed
+- Made adjustments on Route path
+-Styling was adjusted
+-Updated Home.css and changed to scss.

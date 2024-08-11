@@ -9,12 +9,12 @@ function Home({ onStartAsGuest, onLogin }) {
 
     const handleGuestClick = () => {
         onStartAsGuest();
-        navigate('/game'); // Navigate to the game page if necessary
+        navigate('/game'); 
     };
 
     const handleLoginClick = () => {
         onLogin();
-        navigate('/game'); // Navigate to the game page if necessary
+        navigate('/game');
     };
 
     return (
