@@ -20,14 +20,16 @@ function Home({ onStartAsGuest, onLogin }) {
     return (
 
         <div className="home-page">
-            <header>
-                <h1>Welcome to a set of Minigames for you to enjoy!</h1>
-            </header>
+            <div className='container'>
+                <header>
+                    <h1>Welcome to a set of Minigames for you to enjoy!</h1>
+                </header>
 
-            <h2>Please log in if you want to restore your previous game.</h2>
+                <h2>Please log in if you want to restore your previous game.</h2>
 
-            <button onClick={handleGuestClick}>Play as Guest</button>
-            <Link to ="/Login"><button>Login</button></Link>
+                <button onClick={handleGuestClick}>Play as Guest</button>
+                <Link to ="/Login"><button>Login</button></Link>
+            </div>
         </div>
     );
 }

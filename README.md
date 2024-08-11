@@ -42,6 +42,14 @@ This demo shows a sample of what the game would look like when running before us
 
 Credits of the unsplash image used to be the front of the card.
 
+Photo by <a href="https://unsplash.com/@amandagraphc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Amanda Jones</a> on <a href="https://unsplash.com/photos/a-pile-of-playing-cards-sitting-on-top-of-each-other-P787-xixGio?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  
+Credits of the unsplash image for the background of the home page.
+
+Photo by <a href="https://unsplash.com/@sortino?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Joshua Sortino</a> on <a href="https://unsplash.com/photos/worms-eye-view-photography-of-ceiling-LqKhnDzSF-8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+Credits of the unsplash image for the background of the login page.
+
 https://youtu.be/ZCKohZwGZMw?si=A9O7aLXM3p5W9O9H
 
 A series of videos providing lessons by Net Ninja showing how to create a Memory Card game using React
@@ -53,6 +61,10 @@ Tutorial video by Tech with tim showing a full stack app using Python and Javasc
 https://youtu.be/7LNl2JlZKHA?si=5tsJVZ_pp0nUBo45
 
 Tutorial video by Arpan Neupane on how to create a Flask and React project
+
+https://www.w3schools.com/
+
+Used to help with the css styling. 
 
 chatgpt.com
 
