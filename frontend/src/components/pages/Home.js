@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import './Home.css';
+import './Home.scss';
 import Login from './Login';
 
 function Home({ onStartAsGuest, onLogin }) {
