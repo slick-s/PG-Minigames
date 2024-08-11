@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import MemoryCard from './components/pages/MemoryCard'; 
 import Home from './components/pages/Home';
+import Login from './components/pages/Login';
 
 function App() {
     const [gameStarted, setGameStarted] = useState(false);
@@ -20,6 +21,7 @@ function App() {
     return (
         <Routes>
             <Route path="/" element={<Home onStartAsGuest={startGameAsGuest} onLogin={login} />} />
+            <Route path="/login" element={<Login/>}/>
             <Route path="/game" element={<MemoryCard userType={userType} />} />
         </Routes>
     );

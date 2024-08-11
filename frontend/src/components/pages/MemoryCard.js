@@ -76,7 +76,7 @@ function MemoryGame() {
     
 
     return (
-        <div>
+        <div className= "memory">
             <h1>Memory Card Game</h1>
             <h2>Turns: {turns}</h2>
             <button onClick={startNewGame}>New Game</button>

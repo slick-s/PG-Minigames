@@ -4,7 +4,7 @@
     background: #000;
   }
   
-  body {
+.memory {
     display: flex;
     flex-direction: column;
     align-items: center; /* Center all content horizontally */
